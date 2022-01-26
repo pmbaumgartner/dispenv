@@ -26,11 +26,15 @@ $ dispenv create
 
 When you're done, `dispenv cleanup <folder>` will remove that folder and clean up any environment artifacts. 
 
-
 **Features**:
+
 - Supports [`conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html#virtual-environments) and `docker` virtual environments
   - `docker` environments are setup to be run with VSCode as a [devcontainer](https://code.visualstudio.com/docs/remote/containers)
 - When asked, if you paste a link to a GitHub Gist that contains a `requirements.txt`, `dispenv` will install those packages inside your environment after creation.
   - Requires the [GitHub CLI](https://cli.github.com/) to be installed.
   - Requires you to be authenticated through the GitHub CLI
 - `dispenv cleanup` will automatically delete the `conda` environment or shut down and remove the containers and images if it's a `docker` environment.
+
+**Recommendations**
+
+- Since this is intended to be a _global_ or _system-wide_ tool, I recommend installing in your `base` environment (if you use `conda`) or using a tool like [`pipx`](https://github.com/pypa/pipx).
